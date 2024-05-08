@@ -1,4 +1,5 @@
 import 'package:e_commerce_platform/Model/gadget_model.dart';
+import 'package:e_commerce_platform/screens/widgets/slide_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,9 +16,13 @@ class HomePage extends ConsumerWidget {
         title: Text('Gadget Store'),
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.shopping_cart),
             onPressed: () {
-              Navigator.pushNamed(context, '/cart');
+              Navigator.pushNamed(
+  context,
+  '/cart',
+  arguments: SlideTransitionPageRouteBuilder(),
+);
             },
           ),
         ],
